@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OnlineForms</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+    <h2 id="title">Online Forms</h2>
+  </header>
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Administration')" id="defaultOpen">Administration</button>
+    <button class="tablinks" onclick="openTab(event, 'Forms')">Forms</button>
+  </div>
+  
+  <div id="Administration" class="tabcontent">
+    <form id="searchForm">   
+        <input type="text" placeholder=" Search...." name="search" id="formName">   
+        <button type="button" onclick="searchForm()" id="administrationSearchButton">Search</button>   
+    </form>  
+
+        <form id="formBuilder">
+         <button type="button" hidden="true" id="addNewRow" class="add-element" onclick="addingRow('textBox', null)">Add</button>
+         <button type="button" hidden="true" id="administrationSaveButton" class="submit-form" onclick="saveForm()">Save</button>
+        </form>
+  </div>
+  
+  <div id="Forms" class="tabcontent">
+    <form id="newForm">   
+      <label id="formname-label">Form name:</label>
+      <input type="text" id="formNameSearch" > 
+      <label id="version-label">Version:</label>
+      <input type="number" id="versionSearch" >
+      <button type="button" id="formTabSearchBtn" onclick="searchOnFormTab()">Search</button>   
+    </form> 
+  </div>
+</div>
+    
+    <script src="script.js"></script>
+    <script src="form.js"></script>
+</body>
+
+</html>
